@@ -67,3 +67,5 @@ export Tooltip from './Tooltip';
 export Well from './Well';
 
 export * as utils from './utils';
+
+import 'bootstrap-sass/_bootstrap.scss';
