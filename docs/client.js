@@ -9,8 +9,6 @@ import {Router, browserHistory} from 'react-router';
 import Root from './src/Root';
 import routes from './src/Routes';
 
-import 'bootstrap/less/bootstrap.less';
-
 import './assets/docs.css';
 import './assets/style.css';
 
@@ -24,6 +22,8 @@ import './assets/favicon.ico';
 import './assets/thumbnail.png';
 import './assets/thumbnaildiv.png';
 import './assets/TheresaKnott_castle.svg';
+
+import 'bootstrap-sass/_bootstrap.scss';
 
 global.CodeMirror = CodeMirror;
 

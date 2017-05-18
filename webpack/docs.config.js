@@ -1,3 +1,5 @@
+var path = require("path");
+
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import ip from 'ip';
 import webpack from 'webpack';
@@ -46,6 +48,16 @@ export default {
       { test: /\.json$/, loader: 'json' },
       { test: /\.jpe?g$|\.gif$|\.png|\.ico$/, loader: 'file?name=[name].[ext]' },
       { test: /\.eot$|\.ttf$|\.svg$|\.woff2?$/, loader: 'file?name=[name].[ext]' },
+      {
+        test:/\.(scss|sass)?$/,
+        loader:'style-loader!css-loader!sass-loader'
+      },
     ],
+  },
+
+  resolve:{
+    alias:{
+      "bootstrap-sass":path.resolve(__dirname, '../../bootstrap-blue-theme/assets/stylesheets/')
+    }
   },
 };
